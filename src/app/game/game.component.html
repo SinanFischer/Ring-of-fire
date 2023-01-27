@@ -1,0 +1,20 @@
+<div class="backgrounds"> 
+    <img src="./assets/img/start-screen-left-bg.webp" alt="board_img" id="main-bg">
+    <div> 
+        <img src="./assets/img/board_overlay.webp" alt="board_img" id="middle-bg">
+    </div>
+</div>
+
+<div class="game-screen">
+
+    <div class="card-stack"> 
+        <img *ngFor="let c of [1,2,3,4,5]; let i = index;" [ngStyle]="{'right.px': i * 5}" src="./assets/img/back-card.png" alt="board_img" >
+        <img (click)="takeCard()"  class="top-card"  style="right:25px"
+         src="./assets/img/back-card.png" alt="board_img" >
+
+        <img (click)="takeCard()" *ngIf="pickCardAnimation" class=" pick-card"  style="right:25px" 
+        src="./assets/img/play_cards/2_of_clubs.svg" alt="board_img">
+
+    </div>
+
+</div>

@@ -1,0 +1,20 @@
+<div class="box">
+    <div class="box-inner">
+        <h1 mat-dialog-title class="centering">Add new Player</h1>
+
+
+
+        <div mat-dialog-content>
+            <p class="centering"  >Please enter the name of a player</p>
+            <mat-form-field>
+                <mat-label class="centering" > Name</mat-label>
+                <input  matInput [(ngModel)]="name">
+            </mat-form-field>
+        </div>
+        <div mat-dialog-actions class="centering">
+            <button mat-button>No Thanks</button>
+            <button mat-button [mat-dialog-close]="name" cdkFocusInitial>Ok</button>
+        </div>
+
+    </div>
+</div>

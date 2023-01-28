@@ -1,0 +1,48 @@
+.player {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    width: 250px;
+    height: 85px;
+
+    padding-bottom: 5px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+    background-color: #707070;
+    z-index: 5;
+    color: white;
+    border: solid white;
+
+    img {
+        width: 80px;
+        height: 80px;
+        z-index: 100;
+    }
+
+    span {
+        font-weight: bold;
+        padding-top: 10px;
+    }
+}
+
+
+.player-active {
+    display: flex;
+    align-items: center;
+    background-color: rgb(114 9 9);
+    img {
+        width: 80px;
+        height: 80px;
+        z-index: 100;
+    }
+
+    span {
+        font-weight: bold;
+        padding-top: 10px;
+    }
+
+}

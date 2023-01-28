@@ -1,0 +1,34 @@
+.pin-bottom {
+    position: fixed; 
+    height: 200px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 100;
+    background-color: rgba($color: #4d4d4d, $alpha: 0.5);
+    z-index: 10; 
+    border: solid 2px #554702;
+}
+
+.card-title {
+    width: 100%;
+    border-bottom: solid 2px white ;
+
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    padding-bottom: 0px ;
+    padding-left: 5%;
+    color: white;
+}
+
+
+
+
+.card-content {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    padding-left: 5%;
+    color: white;
+}

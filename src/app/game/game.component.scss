@@ -32,7 +32,7 @@
     top: 0;
     width: 100vw;
     height: 100vh;
-    z-index: 2;
+    z-index: 4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,6 +63,11 @@
             transform: scale(1.0) translateX(200px)  translateY(-250px) rotate(30deg);
         }
 
+        .played-card {
+            right: 25px;
+            transform: scale(1.0) translateX(200px)  translateY(-250px) rotate(30deg);
+        }
+
         @keyframes pick-card-animation {
             0% {
                 transform: scale(1);
@@ -81,8 +86,23 @@
             100% {
                 transform: scale(1.0) translateX(200px)  translateY(-250px) rotate(30deg);
             }
-
-
         }
     }
 }
+
+
+.add-player-btn {
+    position: absolute;
+    bottom: 220px;
+    right: 32px;
+}
+
+
+
+.player-position {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+}
+

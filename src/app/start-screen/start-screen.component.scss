@@ -85,7 +85,7 @@
     height: 60px;
     border: none;
     outline: none;
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 20px;
     font-weight: bold;
     background: #111;
@@ -114,12 +114,12 @@
 }
 
 .glow-on-hover:active {
-    color: #000; 
+    color: rgb(255, 255, 255); 
     font-weight: bold;
 }
 
 .glow-on-hover:hover {
-    color: #000; 
+    color: rgb(255, 255, 255); 
     font-weight: bold;
     filter: brightness(1.1);
 }

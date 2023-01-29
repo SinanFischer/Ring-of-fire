@@ -1,6 +1,10 @@
 <app-player *ngFor="let player of game.players ; let i = index; " class="player-position" [name]="player"  [playerActive]="i == game.currentPlayer"
      [ngStyle]="{'top.px': 85 + (i * 95)}"> </app-player>
 
+     
+<app-player *ngFor="let player of game.players ; let i = index; " class="player-position-left" [name]="player"  [playerActive]="i == game.currentPlayer"
+     [ngStyle]="{'top.px': 85 + (i * 95)}"> </app-player>
+
 
 <div class="backgrounds">
     <img src="./assets/img/start-screen-left-bg.webp" alt="board_img" id="main-bg">
@@ -34,4 +38,4 @@
     </button>
 </div>
 
-<app-game-description [card]="lastCard"> </app-game-description>
+<app-game-description [card]="newCard"> </app-game-description>

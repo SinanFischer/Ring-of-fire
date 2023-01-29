@@ -5,9 +5,7 @@ export class Game {
     public currentPlayer: number = 0;
 
     constructor() {
-
         this.createShuffeldStack();
-
     }
 
     createShuffeldStack() {

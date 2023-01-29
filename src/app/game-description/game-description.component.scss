@@ -8,12 +8,13 @@
     background-color: rgba($color: #4d4d4d, $alpha: 0.5);
     z-index: 10; 
     border: solid 2px #554702;
+    
 }
 
 .card-title {
     width: 100%;
     border-bottom: solid 2px white ;
-
+    font-size: 24px;
     display: flex;
     justify-content: flex-start;
     padding: 10px;
@@ -26,6 +27,7 @@
 
 
 .card-content {
+    font-size: 20px;
     display: flex;
     justify-content: flex-start;
     padding: 10px;

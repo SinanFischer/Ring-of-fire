@@ -17,11 +17,13 @@ export class GameDescriptionComponent  implements OnInit, OnChanges {
     { title: 'Chicks', description: 'All girls drink.' },
     { title: 'Heaven', description: 'Put your hands up! The last player drinks!' },
     { title: 'Mate', description: 'Pick a mate. Your mate must always drink when you drink and the other way around.' },
-    { title: 'Thumbmaster', description: '' },
+    { title: 'Thumbmaster', description: 'Make up a guess, whoever is closest gets 2 sips' },
     { title: 'Men', description: 'All men drink.' },
-    { title: 'Quizmaster', description: '' },
-    { title: 'Never have i ever...', description: 'Say something you nnever did. Everyone who did it has to drink.' },
+    { title: 'Quizmaster', description: 'Think of a quiz question where you know the answer. If anyone knows the answer, they can distribute 3 sips' },
+    { title: 'Never have i ever...', description: 'Say something you never did. Everyone who did it has to drink.' },
     { title: 'Rule', description: 'Make a rule. Everyone needs to drink when he breaks the rule.' },
+    { title: 'Fun', description: 'Make a joke' },
+    { title: 'Animal', description: 'pantomime an animal, if you cant do it, drink 3 sips' },
   ];
 
   title = 'Be ready';
@@ -37,17 +39,34 @@ export class GameDescriptionComponent  implements OnInit, OnChanges {
 
 
   ngOnChanges(): void {
+    this.renderInfoCards(); 
+
+  }
+
+
+  // updates card-info content when new card is picked
+  renderInfoCards() {
+    if (this.card) {
     console.log('currentOnChange card is: ' ,this.card); 
     let cardNumber = this.card.split('_')[0];
-    if (this.isString(cardNumber)) {
-      console.log('Es wurde ein special gezogen'); 
-    }
-    else {
-      this.title = this.cardAction[cardNumber].title; 
-      this.description = this.cardAction[cardNumber].description; 
+        let number = 0; 
+        if (cardNumber === 'ace') { number = 11;   }
+        if (cardNumber === 'jack') { number = 12;   }
+        if (cardNumber === 'queen') { number = 13;    }
+        if (cardNumber === 'king') { number = 14;   }
 
-    }
+        if (number === 0)  this.pushCardInfos(cardNumber);  
+        else this.pushCardInfos(number); 
   }
+}
+
+
+  pushCardInfos(cardNumber) {
+    console.log('title description', this.title, this.description)
+    this.title = this.cardAction[cardNumber].title; 
+    this.description = this.cardAction[cardNumber].description; 
+  }
+
 
   // check if variable is string
    isString(x:string) {

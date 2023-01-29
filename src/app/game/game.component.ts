@@ -43,6 +43,8 @@ export class GameComponent implements OnInit {
 
     this.game.playedCards.push(this.newCard); 
 
+    this.game.currentPlayer++;  
+    this.game.currentPlayer = this.game.currentPlayer % this.game.players.length;  
 
     setTimeout(() => {
       this.pickCardAnimation = false;
@@ -58,9 +60,18 @@ export class GameComponent implements OnInit {
     const dialogRef = this.dialog.open(DialogAddPlayerComponent);
 
     dialogRef.afterClosed().subscribe(name => {
-     this.game.players.push(name); 
-
-      console.log('The dialog was closed', name);
-    });
+      if (!name) {} 
+      else this.game.players.push(name); 
+ 
+       console.log('The dialog was closed', name);
+     });
   }
+
+
+
+ 
+
+
+
+
 }

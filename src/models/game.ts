@@ -4,9 +4,31 @@ export class Game {
     public playedCards: string[] = [];
     public currentPlayer: number = 0;
 
+
+    playerPickedCards: any = [
+        {
+          id: 1,
+          cardsPicked: ['card1', 'card2',]
+        },
+        {
+          id: 2,
+          cardsPicked: ['card1', 'card2',]
+        },
+        {
+          id: 3,
+          cardsPicked: ['card1', 'card2',]
+        },
+        {
+          id: 4,
+          cardsPicked: ['card1', 'card2',]
+        },
+    ]
+
+
     constructor() {
         this.createShuffeldStack();
     }
+    
 
     createShuffeldStack() {
         this.addNumberCards(); 
@@ -15,6 +37,7 @@ export class Game {
     }
 
 
+    // adds all cards to stack from 2 to 10
     addNumberCards() {
         for (let i = 2; i < 10; i++) {
             this.stack.push(i + '_of_clubs.svg');
@@ -25,6 +48,7 @@ export class Game {
     }
 
 
+        // adds all cards like: queen king ace jack 
     addSpecialCards() {
         for (let i = 0; i < 4; i++) {
 
@@ -43,6 +67,7 @@ export class Game {
     }
 
 
+    // shuffels the card deck
      shuffle(array:string[]) {
         let currentIndex = array.length,  randomIndex;
       

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Game } from 'src/models/game';
+
 
 @Component({
   selector: 'app-dialog-add-player',
@@ -7,7 +9,20 @@ import { Component } from '@angular/core';
 })
 export class DialogAddPlayerComponent {
 
+  game: Game; 
   name:string = ''; 
 
 
+   playerGenderIs = ''; 
+
+   constructor() {
+    this.game = new Game(); 
+
+   }
+
+
+
+
+  
+ 
 }
